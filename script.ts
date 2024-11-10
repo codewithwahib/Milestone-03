@@ -16,21 +16,23 @@ resumeForm.addEventListener('submit', function(event: Event): void {
 
     // Create the resume content
     const resumeContent: string = `
-        <h2>${name}'s Resume</h2>
-        <h3>Contact Information</h3>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
+        <h2><b>Editable Resume</b></h2>
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> <span contenteditable="true">${name}</span></p>
+        <p><strong>Email:</strong> <span contenteditable="true">${email}</span></p>
+        <p><strong>Phone:</strong> <span contenteditable="true">${phone}</span></p>
 
         <h3>Education</h3>
-        <p>${education}</p>
+        <p contenteditable="true">${education}</p>
 
         <h3>Work Experience</h3>
-        <p>${experience}</p>
+        <p contenteditable="true">${experience}</p>
 
         <h3>Skills</h3>
-        <p>${skills}</p>
+        <p contenteditable="true">${skills}</p>
     `;
 
     // Display the resume content in the resume-display div
     resumeDisplay.innerHTML = resumeContent;
 });
+
